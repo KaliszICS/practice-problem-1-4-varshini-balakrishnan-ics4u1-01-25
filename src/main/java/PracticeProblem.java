@@ -60,7 +60,7 @@ public static int getNumber (int line, String file) {
 	}
 	return -1;
 }
-public static void filleAppend(String output, String filename) {
+public static void fileAppend(String output, String filename) {
 	try {
 		BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));
 		bw.write(output);
