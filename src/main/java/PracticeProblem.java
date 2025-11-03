@@ -58,12 +58,9 @@ public static int getNumber (int line, String file) {
 	return -1;
 }
 public static void fileAppend(String output, String filename) {
-	try {
-		BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));
-		bw.write(output);
-		bw.close();
+	try(FileWriter fw = new FileWriter(filename, true)) {
+		fw.write(output);
 	} catch (IOException e) {
-		System.out.println(e);
 	}
 }
 }
