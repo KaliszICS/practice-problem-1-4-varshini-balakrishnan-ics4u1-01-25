@@ -5,7 +5,6 @@ public static String getName(int line, String file) {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String currentLine;
 		int current = 1;
-
 		while ((currentLine = br.readLine()) != null) {
 			if (current == line) {
 				String[] parts = currentLine.split(" ");
@@ -25,7 +24,6 @@ public static int getAge(int line, String file) {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String currentLine;
 		int current = 1;
-
 		while ((currentLine = br.readLine()) != null) {
 			if (current == line) {
 				String[] parts = currentLine.split(" ");
@@ -45,7 +43,6 @@ public static int getNumber (int line, String file) {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String currentLine;
 		int current = 1;
-
 		while ((currentLine = br.readLine()) != null) {
 			if (current == line) {
 				String[] parts = currentLine.split(" ");
@@ -64,7 +61,6 @@ public static void fileAppend(String output, String filename) {
 	try {
 		BufferedWriter bw = new BufferedWriter(new FileWriter(filename, true));
 		bw.write(output);
-		bw.newLine();
 		bw.close();
 	} catch (IOException e) {
 		System.out.println(e);
