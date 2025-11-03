@@ -38,7 +38,7 @@ public static int getAge(int line, String file) {
 	} catch(IOException | NumberFormatException e) {
 		System.out.println(e);
 	}
-	return 1;
+	return -1;
 }
 public static int getNumber (int line, String file) {
 	try {
@@ -58,7 +58,7 @@ public static int getNumber (int line, String file) {
 	} catch (IOException | NumberFormatException e) {
 		System.out.println(e);
 	}
-	return 1;
+	return -1;
 }
 public static void filleAppend(String output, String filename) {
 	try {
